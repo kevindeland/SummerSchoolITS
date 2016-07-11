@@ -38,69 +38,75 @@
     </head>
     <body>
         <div id="container" style="display: flex; flex-direction: column; height: 600px; border: 0px solid black;">
-            <div id="tutor" style="display: flex; flex-direction: row;" >
-                <div id="statement" class="CTATTextField" style="flex: auto; position: relative; left: 25px; top: 20px; width: 385px; height: 136px">We have X number of oranges, as shown below. Move the oranges into the bins </div>
-                <div id="components" style="flex: auto; position: relative; left: 25px; top: 10  px; ">
+            <div id="tutor" style="display: flex; flex-direction: column;" >
+                <div id="statement" class="CTATTextField" style="flex: auto; position: relative; left: 25px; top: 20px; width: 385px; height: 100px">We have X number of oranges, as shown below. Move the oranges into the bins </div>
+                <div id="components" style="flex: auto; position: relative; left: 25px; top: 0px; ">
 
-                    <div id="source-container">
+                    <div id="source-bucket-row" style="flex: auto; position: relative; left: 0px; top: 0px; height: 150px">
                         <div id="label-bucket-source" class="CTATTextField">Source Bucket </div>
                         <div id="source" class="CTATDragNDrop"
                              data-ctat-max-cardinality="4"
                              data-ctat-tutor="false" name="DragNDropGroup">
                             <div id="dndcircle_1" style="width:48px;height:48;">
-                                <svg width="48" height="48">
-                                    <circle cx="24" cy="24" r="20" stroke="darkblue"
-                                            fill="orange" stroke-width="2px"/>
-                                </svg>
+                                <img src="Assets/orange-icon.png" height="48" width="48">
                             </div>
                             <div id="dndcircle_2" style="width:48px;height:48;">
-                                <svg width="48" height="48">
-                                    <circle cx="24" cy="24" r="20" stroke="darkblue"
-                                            fill="orange" stroke-width="2px"/>
-                                </svg>
+                                <img src="Assets/orange-icon.png" height="48" width="48">
                             </div>
                             <div id="dndcircle_3" style="width:48px;height:48;">
-                                <svg width="48" height="48">
-                                    <circle cx="24" cy="24" r="20" stroke="darkblue"
-                                            fill="orange" stroke-width="2px"/>
-                                </svg>
+                                <img src="Assets/orange-icon.png" height="48" width="48">
                             </div>
                             <div id="dndcircle_4" style="width:48px;height:48;">
-                                <svg width="48" height="48">
-                                    <circle cx="24" cy="24" r="20" stroke="darkblue"
-                                            fill="orange" stroke-width="2px"/>
-                                </svg>
+                                <img src="Assets/orange-icon.png" height="48" width="48">
                             </div>
                             <div id="dndcircle_5" style="width:48px;height:48;">
-                                <svg width="48" height="48">
+                                <img src="Assets/orange-icon.png" height="48" width="48">
+                            </div>
+                            <!--<svg width="48" height="48">
                                     <circle cx="24" cy="24" r="20" stroke="darkblue"
                                             fill="orange" stroke-width="2px"/>
-                                </svg>
+                                </svg>-->
+                        </div>
+                    </div>
+
+                    <div id="sink-bucket-row" style="display: flex; flex-direction: row " >
+                        <div id="container-bucket-4" style="display: flex; flex-direction: column;" >
+                            <div id="label-bucket-4" class="CTATTextField">Bucket 4</div>
+                            <div id="bucket-4" class="CTATDragNDrop" name="DragNDropGroup"
+                                 data-ctat-max-cardinality="4"
+                                 data-ctat-tutor="false">
                             </div>
-
+                        </div>
+                        <div id="container-bucket-2" style="display: flex; flex-direction: column;" >
+                            
+                            <div id="label-bucket2" class="CTATTextField">Bucket 2</div>
+                            <div id="bucket-2" class="CTATDragNDrop" name="DragNDropGroup"
+                                 data-ctat-max-cardinality="2"
+                                 data-ctat-tutor="false">
+                            </div>
+                        </div>
+                        <div id="container-bucket-1" style="display: flex; flex-direction: column;" >
+                            <div id="label-bucket1" class="CTATTextField">Bucket 1</div>
+                            <div id="bucket-1" class="CTATDragNDrop" name="DragNDropGroup"
+                                 data-ctat-max-cardinality="1"
+                                 data-ctat-tutor="false">
+                            </div>
                         </div>
                     </div>
-
-                    <div id="bucket-container">
-                        <div id="label-bucket1" class="CTATTextField">Bucket 1</div>
-                        <div id="bucket-1" class="CTATDragNDrop" name="DragNDropGroup"
-                             data-ctat-max-cardinality="1"
-                             data-ctat-tutor="false">
-                        </div>
-                        <div id="label-bucket2" class="CTATTextField">Bucket 2</div>
-                        <div id="bucket-2" class="CTATDragNDrop" name="DragNDropGroup"
-                             data-ctat-max-cardinality="2"
-                             data-ctat-tutor="false">
-                        </div>
-                        <div id="label-bucket4" class="CTATTextField">Bucket 4</div>
-                        <div id="bucket-4" class="CTATDragNDrop" name="DragNDropGroup"
-                             data-ctat-max-cardinality="4"
-                             data-ctat-tutor="false">
-                        </div>
+                    <div id="lightbulb-row">
+                        <img id="lighbulb-4" src="Assets/lightbulb-on-icon.png" height="48" width="48">
+                        <img id="lighbulb-4" src="Assets/lightbulbXS-on-icon.png" height="48" width="48">
+                        <img id="lighbulb-4" src="Assets/lightbulb-on-icon.png" height="48" width="48">
                     </div>
-                    <div id="submit" class="CTATSubmitButton"
-                         data-ctat-target="sink">
-                        Submit
+                    <div id="button-row">
+                        <div id="hint" class="CTATButton"
+                             data-ctat-target="sink">
+                            Hint
+                        </div>
+                        <div id="submit" class="CTATSubmitButton"
+                             data-ctat-target="sink">
+                            Submit
+                        </div>
                     </div>
                 </div>
             </div>
