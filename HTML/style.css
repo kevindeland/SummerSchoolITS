@@ -90,12 +90,39 @@ html, body {
     margin: 2px;
 }
 
-#card-container {
-    flex: auto;
-    flex-direction: row;
+#section-content p { display: inline;}
+#original-decimal {
+    width: 20px;
+    display: inline;
 }
-#card-container img {
+
+#card-row {
+    display: flex;
+    flex-direction: row;
+//    background-color:#ffffbb;
+    padding: 5px;
+}
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:400;
+//    background-color:#ffbbff;
+    margin: 5px;
+}
+.card-container img{
     margin: 2px;
     border-width: 3px;
     border-style: solid;
+}
+.card-container div {
+    margin: 2px;
+    width: 20px;
+}
+
+#final-answer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
 }
