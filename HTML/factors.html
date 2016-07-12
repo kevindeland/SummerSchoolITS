@@ -4,17 +4,7 @@
         <title>HTML Factors</title>
 
         <link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/latest/CTAT.css">
-
-        <style>
-         html,body { width: 100%; height: 100%; margin: 0px; padding: 0px; 
-	     font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; }
-         .CTATTextInput { width: 120px; height: 22px; margin: 5px; font-size: inherit; }  
-         textarea, input[type="text"] { font-family: Verdana, Arial, Helvetica, sans-serif; }
-         textarea { border: none;  }
-         .fraction-bar { width: 67px; border-style: solid; margin: 5px 0px 0px 0px; color: black; }
-         .boldtext { font-weight: bold; }
-
-        </style>
+        <link rel="stylesheet" type="text/css" href="Assets/style.css">
 
         <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
         <script src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctat.min.js"></script>
@@ -39,10 +29,10 @@
     <body>
         <div id="container" style="display: flex; flex-direction: column; height: 600px; border: 0px solid black;">
             <div id="tutor" style="display: flex; flex-direction: column;" >
-                <div id="statement" class="CTATTextField" style="flex: auto; position: relative; left: 25px; top: 20px; width: 385px; height: 100px">We have X number of oranges, as shown below. Move the oranges into the bins </div>
-                <div id="components" style="flex: auto; position: relative; left: 25px; top: 0px; ">
+                <div id="statement" class="CTATTextField" style="flex: auto; position: relative; left: 25px; top: 20px; width: 385px; height: 180px">We have X number of oranges, as shown below. Move the oranges into the bins to tell the computer how to store the oranges. </div>
+                <div id="components" style="flex: auto; position: relative; left: 25px; top: 20px; ">
 
-                    <div id="source-bucket-row" style="flex: auto; position: relative; left: 0px; top: 0px; height: 150px">
+                    <div id="source-bucket-row">
                         <div id="label-bucket-source" class="CTATTextField">Source Bucket </div>
                         <div id="source" class="CTATDragNDrop"
                              data-ctat-max-cardinality="4"
@@ -69,35 +59,50 @@
                         </div>
                     </div>
 
-                    <div id="sink-bucket-row" style="display: flex; flex-direction: row " >
-                        <div id="container-bucket-4" style="display: flex; flex-direction: column;" >
+                    <div id="sink-bucket-row" >
+                        <div id="container-bucket-4" class="container-bucket">
                             <div id="label-bucket-4" class="CTATTextField">Bucket 4</div>
-                            <div id="bucket-4" class="CTATDragNDrop" name="DragNDropGroup"
-                                 data-ctat-max-cardinality="4"
-                                 data-ctat-tutor="false">
+                            <div class="inner-bucket-container">
+                                <div id="bucket-4" class="CTATDragNDrop bucket" name="DragNDropGroup"
+                                     data-ctat-max-cardinality="4"
+                                    data-ctat-tutor="false">
+                                </div>
                             </div>
+                            <img hidden id="lighbulb-on-4" src="Assets/lightbulb-on-icon.png" height="48" width="48">
+                            <img id="lighbulb-off-4" src="Assets/lightbulb-off-icon.png" height="48" width="48">
                         </div>
-                        <div id="container-bucket-2" style="display: flex; flex-direction: column;" >
-                            
+                        <div id="container-bucket-2" class="container-bucket">
                             <div id="label-bucket2" class="CTATTextField">Bucket 2</div>
-                            <div id="bucket-2" class="CTATDragNDrop" name="DragNDropGroup"
-                                 data-ctat-max-cardinality="2"
-                                 data-ctat-tutor="false">
+                            <div class="inner-bucket-container">
+                                <div id="bucket-2" class="CTATDragNDrop bucket" name="DragNDropGroup"
+                                     data-ctat-max-cardinality="2"
+                                     data-ctat-tutor="false">
+                                </div>
                             </div>
+                            <img id="lighbulb-on-2" src="Assets/lightbulb-on-icon.png" height="48" width="48">
+                            <img hidden id="lighbulb-off-2" src="Assets/lightbulb-off-icon.png" height="48" width="48">
                         </div>
-                        <div id="container-bucket-1" style="display: flex; flex-direction: column;" >
+                        <div id="container-bucket-1" class="container-bucket">
                             <div id="label-bucket1" class="CTATTextField">Bucket 1</div>
-                            <div id="bucket-1" class="CTATDragNDrop" name="DragNDropGroup"
-                                 data-ctat-max-cardinality="1"
-                                 data-ctat-tutor="false">
+                            <div class="inner-bucket-container">
+                                <div id="bucket-1" class="CTATDragNDrop bucket" name="DragNDropGroup"
+                                     data-ctat-max-cardinality="1"
+                                     data-ctat-tutor="false">
+                                </div>
                             </div>
+                            <img hidden id="lighbulb-on-1" src="Assets/lightbulb-on-icon.png" height="48" width="48">
+                            <img id="lighbulb-off-1" src="Assets/lightbulb-off-icon.png" height="48" width="48">
                         </div>
                     </div>
-                    <div id="lightbulb-row">
-                        <img id="lighbulb-4" src="Assets/lightbulb-on-icon.png" height="48" width="48">
-                        <img id="lighbulb-4" src="Assets/lightbulb-on-icon.png" height="48" width="48">
-                        <img id="lighbulb-4" src="Assets/lightbulb-on-icon.png" height="48" width="48">
+
+                    <div id="card-row">
+                        <img src="Assets/card_dot_16.png" height="200">
+                        <img src="Assets/card_dot_8.png" height="200">
+                        <img src="Assets/card_dot_4.png" height="200">
+                        <img src="Assets/card_dot_2.png" height="200">
+                        <img src="Assets/card_dot_1.png" height="200">
                     </div>
+                    
                     <div id="button-row">
                         <div id="hint" class="CTATButton"
                              data-ctat-target="sink">
@@ -110,13 +115,15 @@
                     </div>
                 </div>
             </div>
-	    
+
+            <!--
             <div id="tools" style="display: flex; flex-direction: row; padding: 10px;">
 	        <div id="hint" class="CTATHintButton"></div>
 	        <div id="hint-window" class="CTATHintWindow" style="flex: auto; margin: 2px;"></div>
 	        <div id="skill-window" class="CTATSkillWindow" style="flex: auto; margin: 2px;"></div>
 	        <div id="done" class="CTATDoneButton" tabindex="8"></div>
             </div>
+            -->
         </div>
     </body>
 </html>
