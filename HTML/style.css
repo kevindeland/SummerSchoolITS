@@ -99,7 +99,6 @@ html, body {
 #card-row {
     display: flex;
     flex-direction: row;
-//    background-color:#ffffbb;
     padding: 5px;
 }
 .card-container {
@@ -107,23 +106,18 @@ html, body {
     flex-direction: column;
     align-items: center;
     height:400;
-//    background-color:#ffbbff;
     margin: 5px;
 }
-.card-container img{
-    margin: 2px;
-    border-width: 3px;
-    border-style: solid;
+
+.card-container .digit-input {
+    margin: auto;
+    width: 25%;
 }
-.card-container div {
-    margin: 2px;
+
+.digit-input input[type="text"] {
     width: 20px;
 }
 
-.card-button {
-    height:150px;
-    width:107px;
-}
 .card-button button {
     margin: 2px;
     border-width: 3px;
