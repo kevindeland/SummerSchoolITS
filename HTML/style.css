@@ -91,7 +91,7 @@ html, body {
 }
 
 #section-content p { display: inline;}
-#original-decimal {
+#originalDecimal {
     width: 20px;
     display: inline;
 }
@@ -118,6 +118,38 @@ html, body {
 .card-container div {
     margin: 2px;
     width: 20px;
+}
+
+.card-button {
+    height:150px;
+    width:107px;
+}
+.card-button button {
+    margin: 2px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+    height: 150px; width: 107px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#cardButton16[value="0"]  button {
+    background-image: url("Assets/card_dot_16.png");
+}
+#cardButton8[value="0"] button {
+    background-image: url("Assets/card_dot_8.png");
+}
+#cardButton4[value="0"] button {
+    background-image: url("Assets/card_dot_4.png");
+}
+#cardButton2[value="0"] button {
+    background-image: url("Assets/card_dot_2.png");
+}
+#cardButton1[value="0"] button {
+    background-image: url("Assets/card_dot_1.png");
+}
+.card-button[value="1"] button {
+    background-image: url("Assets/red_card_back.png");
 }
 
 #final-answer-container {
