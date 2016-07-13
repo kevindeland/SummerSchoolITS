@@ -16,6 +16,20 @@
 	<script src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctatloader.js"></script>
 
 	<script>
+
+         $(document).ready(function() {
+             $(".card-container img").click(function() {
+                 console.log('flipping card' );
+
+                 $(this).hide();
+                 var showClass = $(this).attr("class") == "card-front" ? ".card-back" : ".card-front";
+                 console.log('showing class', showClass);
+
+                 var showMe = $(this).siblings(showClass);
+                 showMe.show();
+             });    
+         });
+                  
 	 var myVars =
 	 {
 	     question_file: "../FinalBRDs/problem.brd",
@@ -26,13 +40,15 @@
 	 {
 	     initTutor(myVars);
 	 }
-	</script>
+
+        </script>
     </head>
 
     <body>
 	<!-- Header -->
 	<div class="tutor-section">
 	    <h1>Binary Numbers</h1>
+            <h3>Lesson 1: Converting from decimal to binary numbers</h3>
 	</div>
 
 	<!-- Problem statement -->		
@@ -58,26 +74,30 @@
             <div class="section-content">
                 <div id="card-row">
                     <div id="card-container-16" class="card-container">
-                        <img src="Assets/card_dot_16.png" height="150">
+                        <img class="card-front" id="card-img-16" src="Assets/card_dot_16.png" height="150">
+                        <img hidden class="card-back" src="Assets/red_card_back.png" height="150">
                         <div id="binary-digit-16" class="CTATTextInput"></div>
                     </div>
                     <div id="card-container-8" class="card-container">
-                        <img src="Assets/card_dot_8.png" height="150">
+                        <img class="card-front" id="card-img-8" src="Assets/card_dot_8.png" height="150">
+                        <img hidden class="card-back" src="Assets/red_card_back.png" height="150">
                         <div id="binary-digit-8" class="CTATTextInput"></div>
                     </div>
                     <div id="card-container-4" class="card-container">
-                        <img src="Assets/card_dot_4.png" height="150">
+                        <img class="card-front" src="Assets/card_dot_4.png" height="150">
+                        <img hidden class="card-back" src="Assets/red_card_back.png" height="150">
                         <div id="binary-digit-4" class="CTATTextInput"></div>
                     </div>
                     <div id="card-container-2" class="card-container">
-                        <img src="Assets/card_dot_2.png" height="150">
+                        <img class="card-front" src="Assets/card_dot_2.png" height="150">
+                        <img hidden class="card-back" src="Assets/red_card_back.png" height="150">
                         <div id="binary-digit-2" class="CTATTextInput"></div>
                     </div>
                     <div id="card-container-1" class="card-container">
-                        <img src="Assets/card_dot_1.png" height="150">
+                        <img class="card-front" src="Assets/card_dot_1.png" height="150">
+                        <img hidden class="card-back" src="Assets/red_card_back.png" height="150">
                         <div id="binary-digit-1" class="CTATTextInput"></div>
                     </div>
-                    
                 </div>
 
                 <div id="final-answer-container">
