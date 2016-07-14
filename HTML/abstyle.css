@@ -90,65 +90,56 @@ html, body {
     margin: 2px;
 }
 
-#section-content p { display: inline;}
-#originalDecimal {
-    width: 20px;
-    display: inline;
+.CTATTextArea  {
+    width: 30px;
 }
 
-#card-row {
+#section-content p { display: inline;}
+
+.multiple-choice-container {
     display: flex;
     flex-direction: row;
-    padding: 5px;
 }
-.card-container {
+
+#decimal-column {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    height:400;
     margin: 5px;
 }
 
-.card-container .digit-input {
-    margin: auto;
-    width: 25%;
-}
-
-.digit-input input[type="text"] {
-    width: 20px;
-}
-
-.card-button button {
-    margin: 2px;
-    border-width: 3px;
-    border-style: solid;
-    border-color: black;
-    height: 150px; width: 107px;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-}
-#cardButton16[value="0"]  button {
-    background-image: url("Assets/card_dot_16.png");
-}
-#cardButton8[value="0"] button {
-    background-image: url("Assets/card_dot_8.png");
-}
-#cardButton4[value="0"] button {
-    background-image: url("Assets/card_dot_4.png");
-}
-#cardButton2[value="0"] button {
-    background-image: url("Assets/card_dot_2.png");
-}
-#cardButton1[value="0"] button {
-    background-image: url("Assets/card_dot_1.png");
-}
-.card-button[value="1"] button {
-    background-image: url("Assets/red_card_back.png");
-}
-
-#final-answer-container {
+.question-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
+}
+.decimal-option {
+    margin: 5px;
+}
+#binary-column {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.binary-option {
+    margin: 5px;
+}
+
+.full-binary-number {
+    width: 60px;
+}
+
+#divider {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#answer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

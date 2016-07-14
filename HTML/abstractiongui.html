@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <!--*******************************************************************************************************
+
+    Mathtutor 6.28 Proportional Reasoning
+    The five major sections, the hint panel and the skill meter are fully done. No problem-specific elements yet.
+
+    ********************************************************************************************************-->
+    <head>
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/latest/CTAT.css">
+        <link rel="stylesheet" type="text/css" href="abstyle.css">
+        
+	<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+	<script src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctat.min.js"></script>
+	<script src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctatloader.js"></script>
+
+	<script>
+
+	 var myVars =
+	 {
+	     question_file: "../FinalBRDs/problem.brd",
+	     tutoring_service_communication: "javascript"
+	 };
+
+	 function ctatOnload ()
+	 {
+	     initTutor(myVars);
+	 }
+
+        </script>
+    </head>
+
+    <body>
+	<!-- Header -->
+	<div class="tutor-section">
+	    <h1>Binary Numbers</h1>
+            <h3>Lesson 1: Converting from decimal to binary numbers</h3>
+	</div>
+
+	<!-- Problem statement -->		
+	<div id="problem" class="tutor-section" >
+	    <div class="section-header">
+		<h2>Problem</h2>
+		<p>Find your goal in this problem.</p>
+	    </div>
+            <div class="section-content">
+                <p>Match the decimal numbers on the left with the binary numbers on the right.</p>
+            </div>
+            
+	</div>
+
+	<!-- Solution steps -->
+	<div id="solution" class="tutor-section" >
+	    <div class="section-header">
+		<h2>Solution</h2>
+		<p>Generate solution steps with feedback from the tutor.</p>
+	    </div>
+
+            <div class="section-content">
+                <div class="multiple-choice-container">
+                    <div id="decimal-column">
+                        <h4>Decimal</h4>
+                        <div class="question-container">
+                            <div class="CTATTextArea decimal-option"></div>
+                            <h4>&nbsp;=&nbsp;</h4>
+                            <div class="CTATTextArea binary-answer"></div>
+                        </div>
+                        <div class="question-container">
+                            <div class="CTATTextArea decimal-option"></div>
+                            <h4>&nbsp;=&nbsp;</h4>
+                            <div class="CTATTextArea binary-answer"></div>
+                        </div>
+                        <div class="question-container">
+                            <div class="CTATTextArea decimal-option"></div>
+                            <h4>&nbsp;=&nbsp;</h4>
+                            <div class="CTATTextArea binary-answer"></div>
+                        </div>
+                        <div class="question-container">
+                            <div class="CTATTextArea decimal-option"></div>
+                            <h4>&nbsp;=&nbsp;</h4>
+                            <div class="CTATTextArea binary-answer"></div>
+                        </div>
+                    </div>
+                    <div id="divider"></div>
+                    <div id="binary-column">
+                        <h4>Choices</h4>
+                        <div class="CTATTextArea binary-option">
+                        </div>
+                        <div class="CTATTextArea binary-option">
+                        </div>
+                        <div class="CTATTextArea binary-option">
+                        </div>
+                        <div class="CTATTextArea binary-option">
+                        </div>
+                    </div>
+                </div>
+            </div>
+	</div>
+
+	<!-- Hint panel -->
+	<div id="hints" class="tutor-section" >
+	    <div class="section-header">
+		<h2>Hints</h2>
+		<p>Request and read hints to help you learn.</p>
+	    </div>
+	    <div id="hint-window" class="CTATHintWindow" ></div>
+	    <div id="hint-button" class="CTATHintButton" ></div>
+	    <div id="done-button" class="CTATDoneButton" ></div>
+	</div>
+
+	<!-- Skill meter -->
+	<div id="skills" class="tutor-section" >
+	    <div class="section-header">
+		<h2>Skills</h2>
+		<p>Watch your skills grow as you solve tutor problems.</p>
+	    </div>
+	    <div id="skill-window" class="CTATSkillWindow" >
+	    </div>
+    </body>
+</html>
