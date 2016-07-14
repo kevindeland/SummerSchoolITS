@@ -1,0 +1,50 @@
+
+// dec=11, digit=8/16
+and(equals(input, 1),
+  and(
+      equals(cardButton16, 0),
+      or(equals(cardButton8, 1),
+         equals(cardButton8, null)),
+      equals(cardButton4, 0),
+      or(equals(cardButton2, 1),
+         equals(cardButton2, null)),
+      or(equals(cardButton1, 1),
+         equals(cardButton1, null))
+)
+)
+
+// dec=2, digit=2/8
+and(equals(input, 1),
+  and(
+      equals(cardButton8, 0),
+      equals(cardButton4, 0),
+      or(equals(cardButton2, 1),
+         equals(cardButton2, null)),
+      equals(cardButton1, 0)
+  )
+)
+
+// dec=2, digit=1,4,8/8
+and(equals(input, 0),
+  and(
+      equals(cardButton8, 0),
+      equals(cardButton4, 0),
+      or(equals(cardButton2, 1),
+         equals(cardButton2, null)),
+      equals(cardButton1, 0)
+  )
+)
+
+
+// all cards null 
+and(
+  equals(cardButton16, null),
+  equals(cardButton8, null),
+  equals(cardButton4, null),
+  equals(cardButton2, null),
+  equals(cardButton1, null)
+)
+                        
+
+// input regular expression matching
+0?0?10 // 2
