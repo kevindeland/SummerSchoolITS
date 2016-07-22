@@ -128,22 +128,22 @@ html, body {
     background-repeat: no-repeat;
 }
 #cardButton16[value="0"]  button {
-    background-image: url("Assets/card_dot_16.png");
+    background-image: url("card_dot_16.png");
 }
 #cardButton8[value="0"] button {
-    background-image: url("Assets/card_dot_8.png");
+    background-image: url("card_dot_8.png");
 }
 #cardButton4[value="0"] button {
-    background-image: url("Assets/card_dot_4.png");
+    background-image: url("card_dot_4.png");
 }
 #cardButton2[value="0"] button {
-    background-image: url("Assets/card_dot_2.png");
+    background-image: url("card_dot_2.png");
 }
 #cardButton1[value="0"] button {
-    background-image: url("Assets/card_dot_1.png");
+    background-image: url("card_dot_1.png");
 }
 .card-button[value="1"] button {
-    background-image: url("Assets/red_card_back.png");
+    background-image: url("red_card_back.png");
 }
 
 #final-answer-container {

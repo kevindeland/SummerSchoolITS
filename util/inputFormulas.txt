@@ -1,30 +1,37 @@
 
 // dec=11, digit=8/16
+and(equals(input, 1), and( equals(cardButton16, 0), or(equals(cardButton8, 1), equals(cardButton8, null)), equals(cardButton4, 0), or(equals(cardButton2, 1), equals(cardButton2, null)), or(equals(cardButton1, 1), equals(cardButton1, null)) ) )
+
+
+// atoms
 and(equals(input, 1),
-  and(
-      equals(cardButton16, 0),
-      or(equals(cardButton8, 1),
-         equals(cardButton8, null)),
-      equals(cardButton4, 0),
-      or(equals(cardButton2, 1),
-         equals(cardButton2, null)),
-      or(equals(cardButton1, 1),
-         equals(cardButton1, null))
+and(equals(input, 0),
+
+and(
+
+equals(cardButton8, 0),
+or(equals(cardButton8, 1), equals(cardButton8, undefined)),
+
+equals(cardButton4, 0),
+or(equals(cardButton4, 1), equals(cardButton4, undefined)),
+
+equals(cardButton2, 0),
+or(equals(cardButton2, 1), equals(cardButton2, undefined)),
+
+equals(cardButton1, 0)
+or(equals(cardButton1, 1), equals(cardButton1, undefined))
 )
 )
+
+// formatted
 
 // dec=2, digit=2/8
-and(equals(input, 1),
-  and(
-      equals(cardButton8, 0),
-      equals(cardButton4, 0),
-      or(equals(cardButton2, 1),
-         equals(cardButton2, null)),
-      equals(cardButton1, 0)
-  )
-)
+and(equals(input, 1), and( equals(cardButton8, 0), equals(cardButton4, 0), or(equals(cardButton2, 1), equals(cardButton2, null)), equals(cardButton1, 0) ) )
 
 // dec=2, digit=1,4,8/8
+and(equals(input, 0), and( equals(cardButton8, 0), equals(cardButton4, 0), or(equals(cardButton2, 1), equals(cardButton2, null)), equals(cardButton1, 0) )
+                                     )
+// formatted                                     
 and(equals(input, 0),
   and(
       equals(cardButton8, 0),
@@ -36,7 +43,11 @@ and(equals(input, 0),
 )
 
 
-// all cards null 
+// all cards null
+
+and( equals(cardButton16, null), equals(cardButton8, null), equals(cardButton4, null), equals(cardButton2, null), equals(cardButton1, null) )
+
+//formatted
 and(
   equals(cardButton16, null),
   equals(cardButton8, null),
