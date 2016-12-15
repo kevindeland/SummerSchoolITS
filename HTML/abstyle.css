@@ -98,14 +98,16 @@ html, body {
 
 .multiple-choice-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
-#decimal-column {
+#decimal-row {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin: 5px;
 }
+
+
 
 .question-container {
     display: flex;
@@ -115,9 +117,21 @@ html, body {
 .decimal-option {
     margin: 5px;
 }
-#binary-column {
+#binary-row {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    margin: 5px;
+}
+
+#values-row {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+
+.my-row {
+    display: flex;
+    flex-direction: row;
     margin: 5px;
 }
 
@@ -132,14 +146,14 @@ html, body {
 #divider {
     width: 100px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
 #answer-column {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
